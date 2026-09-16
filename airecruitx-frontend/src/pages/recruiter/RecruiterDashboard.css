@@ -1,0 +1,493 @@
+
+.recruiter-dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px;
+  background: #f5f7fb;
+  color: #172033;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.dashboard-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 750;
+  color: #172033;
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: #697386;
+  font-size: 14px;
+}
+
+/* Summary cards */
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.dashboard-card {
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(28, 42, 74, 0.04);
+}
+
+.card-label {
+  margin-bottom: 12px;
+  color: #697386;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-value {
+  color: #172033;
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+/* Analytics panels */
+
+.analytics-panel {
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(28, 42, 74, 0.04);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.panel-header h2 {
+  margin: 0 0 7px;
+  color: #172033;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.panel-header p {
+  margin: 0;
+  color: #7b8495;
+  font-size: 13px;
+}
+
+/* Analytics filters */
+
+.dashboard-filters-panel {
+  margin-bottom: 24px;
+}
+
+.dashboard-filters-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  align-items: end;
+  gap: 16px;
+}
+
+.dashboard-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.dashboard-filter-field label {
+  color: #4b5568;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.dashboard-filter-field input,
+.dashboard-filter-field select {
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  padding: 0 12px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid #dce3ee;
+  border-radius: 10px;
+  outline: none;
+  font: inherit;
+  font-size: 13px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-filter-field input:focus,
+.dashboard-filter-field select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.dashboard-filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-apply-button,
+.filter-reset-button {
+  height: 44px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.filter-apply-button {
+  color: #ffffff;
+  background: #4f46e5;
+}
+
+.filter-apply-button:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.filter-reset-button {
+  color: #4b5568;
+  background: #f1f4f9;
+  border-color: #e1e7f0;
+}
+
+.filter-reset-button:hover {
+  background: #e6ebf3;
+  transform: translateY(-1px);
+}
+
+.dashboard-filters-panel .dashboard-error {
+  margin-top: 16px;
+}
+
+/* Application status overview */
+
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.status-row {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr) 55px;
+  align-items: center;
+  gap: 16px;
+}
+
+.status-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #4b5568;
+  font-size: 13px;
+}
+
+.status-heading strong {
+  color: #172033;
+}
+
+.status-track,
+.job-application-track {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  background: #edf1f7;
+  border-radius: 999px;
+}
+
+.status-fill,
+.job-application-fill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.35s ease;
+}
+
+.status-applied {
+  background: #5488f5;
+}
+
+.status-shortlisted {
+  background: #9b6cf0;
+}
+
+.status-interview {
+  background: #e9a23b;
+}
+
+.status-selected {
+  background: #2eae83;
+}
+
+.status-rejected {
+  background: #e36b75;
+}
+
+.status-percentage {
+  color: #7b8495;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* Monthly applications chart */
+
+.monthly-analytics-panel {
+  min-height: 330px;
+}
+
+.monthly-chart {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 18px;
+  height: 240px;
+  padding: 10px 8px 0;
+  border-bottom: 1px solid #e8edf5;
+}
+
+.monthly-chart-column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.monthly-chart-count {
+  min-height: 22px;
+  margin-bottom: 8px;
+  color: #4b5568;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.monthly-chart-bar-area {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  max-width: 54px;
+}
+
+.monthly-chart-bar {
+  width: 100%;
+  background: linear-gradient(180deg, #7c6cf2 0%, #4f46e5 100%);
+  border-radius: 8px 8px 0 0;
+  transition: height 0.35s ease;
+}
+
+.monthly-chart-label {
+  min-height: 28px;
+  padding-top: 10px;
+  color: #697386;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Applications by job */
+
+.job-application-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.job-application-item {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.job-application-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  color: #4b5568;
+  font-size: 13px;
+}
+
+.job-application-heading strong {
+  color: #172033;
+}
+
+.job-application-fill {
+  background: linear-gradient(90deg, #6f7bf7, #4f46e5);
+}
+
+/* Job performance table */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.performance-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.performance-table th {
+  padding: 14px 16px;
+  background: #f7f9fc;
+  color: #697386;
+  font-size: 12px;
+  font-weight: 650;
+  border-bottom: 1px solid #e8edf5;
+}
+
+.performance-table td {
+  padding: 16px;
+  color: #4b5568;
+  font-size: 13px;
+  border-bottom: 1px solid #edf1f7;
+}
+
+.performance-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.performance-table tbody tr:hover {
+  background: #fafbfe;
+}
+
+.performance-table .job-title-cell {
+  color: #172033;
+  font-weight: 650;
+}
+
+.job-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.job-active {
+  background: #e6f7ef;
+  color: #18865e;
+}
+
+.job-inactive {
+  background: #f1f3f7;
+  color: #70798a;
+}
+
+/* Loading, error and empty states */
+
+.dashboard-message,
+.dashboard-error,
+.empty-state {
+  padding: 28px;
+  color: #697386;
+  text-align: center;
+  font-size: 14px;
+}
+
+.dashboard-error {
+  color: #c0394b;
+  background: #fff0f1;
+  border: 1px solid #ffd4d8;
+  border-radius: 12px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1100px) {
+  .dashboard-filters-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-filter-actions {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .recruiter-dashboard {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .recruiter-dashboard {
+    padding: 14px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 23px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dashboard-card,
+  .analytics-panel {
+    padding: 18px;
+  }
+
+  .dashboard-filters-form {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .dashboard-filter-actions {
+    grid-column: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-apply-button,
+  .filter-reset-button {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .status-row {
+    grid-template-columns: 100px minmax(0, 1fr) 45px;
+    gap: 10px;
+  }
+
+  .monthly-chart {
+    gap: 8px;
+  }
+
+  .monthly-chart-label {
+    font-size: 10px;
+  }
+}
