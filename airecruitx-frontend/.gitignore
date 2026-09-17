@@ -22,3 +22,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Build output and dependencies
+**/target/
+**/node_modules/
+**/dist/
+
+# IDE files
+.idea/
+.vscode/
+
+# Uploaded resumes and private files
+airecruitx-backend/uploads/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
