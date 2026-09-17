@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+import org.springframework.http.HttpMethod;
 
 import java.io.IOException;
 
@@ -86,4 +87,8 @@ public class JwtAuthenticationFilter
 
         filterChain.doFilter(request, response);
     }
+    @Override
+protected boolean shouldNotFilter(HttpServletRequest request) {
+    return HttpMethod.OPTIONS.matches(request.getMethod());
+}
 }
