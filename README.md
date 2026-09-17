@@ -50,160 +50,18 @@ AI RecruitX is a full-stack recruitment platform designed to connect candidates 
 ## 📁 Project Structure
 
 AI-RecruitX/
-│
 ├── airecruitx_backend/
-│   │
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   │       └── airecruitx/
-│   │   │   │           └── airecruitx_backend/
-│   │   │   │
-│   │   │   │               ├── AirecruitxBackendApplication.java
-│   │   │   │               │
-│   │   │   │               ├── config/
-│   │   │   │               │   ├── CorsConfig.java
-│   │   │   │               │   └── SecurityConfig.java
-│   │   │   │               │
-│   │   │   │               ├── controller/
-│   │   │   │               │   ├── AuthController.java
-│   │   │   │               │   ├── JobController.java
-│   │   │   │               │   ├── ApplicationController.java
-│   │   │   │               │   ├── CandidateController.java
-│   │   │   │               │   ├── RecruiterController.java
-│   │   │   │               │   ├── RecruiterApplicationController.java
-│   │   │   │               │   ├── AdminController.java
-│   │   │   │               │   ├── ResumeController.java
-│   │   │   │               │   ├── DashboardController.java
-│   │   │   │               │   └── NotificationController.java
-│   │   │   │               │
-│   │   │   │               ├── service/
-│   │   │   │               │   ├── AuthService.java
-│   │   │   │               │   ├── JobService.java
-│   │   │   │               │   ├── ApplicationService.java
-│   │   │   │               │   ├── CandidateService.java
-│   │   │   │               │   ├── RecruiterService.java
-│   │   │   │               │   ├── ResumeService.java
-│   │   │   │               │   ├── ResumeAnalysisService.java
-│   │   │   │               │   ├── JobMatchingService.java
-│   │   │   │               │   ├── DashboardService.java
-│   │   │   │               │   └── NotificationService.java
-│   │   │   │               │
-│   │   │   │               ├── repository/
-│   │   │   │               │   ├── UserRepository.java
-│   │   │   │               │   ├── JobRepository.java
-│   │   │   │               │   ├── ApplicationRepository.java
-│   │   │   │               │   ├── CandidateRepository.java
-│   │   │   │               │   ├── RecruiterRepository.java
-│   │   │   │               │   ├── ResumeRepository.java
-│   │   │   │               │   └── NotificationRepository.java
-│   │   │   │               │
-│   │   │   │               ├── entity/
-│   │   │   │               │   ├── User.java
-│   │   │   │               │   ├── Job.java
-│   │   │   │               │   ├── Application.java
-│   │   │   │               │   ├── Candidate.java
-│   │   │   │               │   ├── Recruiter.java
-│   │   │   │               │   ├── Resume.java
-│   │   │   │               │   ├── Notification.java
-│   │   │   │               │   └── ApplicationStatus.java
-│   │   │   │               │
-│   │   │   │               ├── dto/
-│   │   │   │               │   ├── LoginRequest.java
-│   │   │   │               │   ├── RegisterRequest.java
-│   │   │   │               │   ├── AuthResponse.java
-│   │   │   │               │   ├── JobRequest.java
-│   │   │   │               │   ├── JobResponse.java
-│   │   │   │               │   ├── ApplicationRequest.java
-│   │   │   │               │   ├── ApplicationResponse.java
-│   │   │   │               │   └── ResumeAnalysisResponse.java
-│   │   │   │               │
-│   │   │   │               ├── security/
-│   │   │   │               │   ├── JwtAuthenticationFilter.java
-│   │   │   │               │   ├── JwtService.java
-│   │   │   │               │   └── CustomUserDetailsService.java
-│   │   │   │               │
-│   │   │   │               ├── exception/
-│   │   │   │               │   ├── GlobalExceptionHandler.java
-│   │   │   │               │   └── ResourceNotFoundException.java
-│   │   │   │               │
-│   │   │   │               └── mapper/
-│   │   │   │                   ├── JobMapper.java
-│   │   │   │                   └── ApplicationMapper.java
-│   │   │   │
-│   │   │   └── resources/
-│   │   │       ├── application.properties
-│   │   │       ├── static/
-│   │   │       └── templates/
-│   │   │
-│   │   └── test/
-│   │       └── java/
-│   │           └── com/
-│   │               └── airecruitx/
-│   │                   └── airecruitx_backend/
-│   │
-│   ├── .mvn/
-│   ├── mvnw
-│   ├── mvnw.cmd
-│   ├── pom.xml
-│   └── README.md
-│
+│   └── src/
+│       └── main/
+│           ├── java/
+│           └── resources/
 ├── frontend/
-│   │
-│   ├── public/
-│   │   └── vite.svg
-│   │
 │   ├── src/
-│   │   ├── assets/
-│   │   │
 │   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Sidebar.jsx
-│   │   │   ├── ProtectedRoute.jsx
-│   │   │   ├── JobCard.jsx
-│   │   │   └── ApplicationCard.jsx
-│   │   │
 │   │   ├── pages/
-│   │   │   ├── auth/
-│   │   │   │   ├── Login.jsx
-│   │   │   │   └── Register.jsx
-│   │   │   │
-│   │   │   ├── candidate/
-│   │   │   │   ├── CandidateDashboard.jsx
-│   │   │   │   ├── CandidateJobs.jsx
-│   │   │   │   ├── CandidateApplications.jsx
-│   │   │   │   ├── CandidateProfile.jsx
-│   │   │   │   └── ResumeAnalysis.jsx
-│   │   │   │
-│   │   │   ├── recruiter/
-│   │   │   │   ├── RecruiterDashboard.jsx
-│   │   │   │   ├── RecruiterJobs.jsx
-│   │   │   │   ├── CreateJob.jsx
-│   │   │   │   ├── RecruiterApplications.jsx
-│   │   │   │   └── RecruiterProfile.jsx
-│   │   │   │
-│   │   │   └── admin/
-│   │   │       └── AdminDashboard.jsx
-│   │   │
-│   │   ├── services/
-│   │   │   └── api.js
-│   │   │
-│   │   ├── context/
-│   │   │   └── AuthContext.jsx
-│   │   │
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── index.css
-│   │
-│   ├── .env.example
-│   ├── .gitignore
-│   ├── index.html
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── vite.config.js
-│   └── README.md
-│
+│   │   └── services/
+│   ├── public/
+│   └── package.json
 ├── .gitignore
 └── README.md
 ## ⚙️ Getting Started
@@ -309,9 +167,6 @@ The objective of AI RecruitX is to simplify recruitment by providing a centraliz
 M Pradeep kumar
 
 Full Stack Java Developer
-
-LinkedIn: [Your LinkedIn Profile](www.linkedin.com/in/pradeep-kumar-mukkannappagari-6547b828a)
-
 ---
 
 ⭐ If you find this project useful, consider giving the repository a star.
