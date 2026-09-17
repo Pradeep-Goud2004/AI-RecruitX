@@ -47,21 +47,55 @@ AI RecruitX is a full-stack recruitment platform designed to connect candidates 
 | Vite                        | Frontend development server and build tool |
 | Tailwind CSS                | UI styling                                 |
 
-## 📁 Project Structure
-
 AI-RecruitX/
-├── airecruitx_backend/
-│   └── src/
-│       └── main/
-│           ├── java/
-│           └── resources/
-├── frontend/
+│
+├── airecruitx-backend/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── services/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/airecruitx/airecruitx_backend/
+│   │   │   │       ├── ai/
+│   │   │   │       ├── config/
+│   │   │   │       ├── controller/
+│   │   │   │       ├── dto/
+│   │   │   │       ├── entity/
+│   │   │   │       ├── exception/
+│   │   │   │       ├── repository/
+│   │   │   │       ├── security/
+│   │   │   │       ├── service/
+│   │   │   │       └── AirecruitxBackendApplication.java
+│   │   │   │
+│   │   │   └── resources/
+│   │   │       └── application.properties
+│   │   │
+│   │   └── test/
+│   ├── uploads/
+│   │   └── resumes/
+│   ├── pom.xml
+│   ├── mvnw
+│   └── mvnw.cmd
+│
+├── airecruitx-frontend/
 │   ├── public/
-│   └── package.json
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   │   ├── admin/
+│   │   │   ├── auth/
+│   │   │   ├── candidate/
+│   │   │   └── recruiter/
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vite.config.js
+│
 ├── .gitignore
 └── README.md
 ## ⚙️ Getting Started
