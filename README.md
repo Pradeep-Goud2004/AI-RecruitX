@@ -45,23 +45,6 @@ AI RecruitX is a full-stack recruitment platform designed to simplify and improv
 | API        | REST API                      |
 | Build Tool | Maven                         |
 
-## 📸 Screenshots
-
-Add screenshots of your actual application in the `screenshots/` folder.
-
-| Page                | Screenshot                            |
-| ------------------- | ------------------------------------- |
-| Login               | `screenshots/login.png`               |
-| Candidate Dashboard | `screenshots/candidate-dashboard.png` |
-| Recruiter Dashboard | `screenshots/recruiter-dashboard.png` |
-| Admin Dashboard     | `screenshots/admin-dashboard.png`     |
-| Job Listings        | `screenshots/job-listings.png`        |
-
-Example Markdown to display a screenshot:
-
-```markdown
-![AI RecruitX Login](screenshots/login.png)
-```
 
 ## 📁 Project Structure
 
@@ -231,12 +214,9 @@ Protected pages and API endpoints require the appropriate authenticated role.
 
 ## 👨‍💻 Author
 
-**Your Name**
+**M Pradeep Kumar**
 
 Full-Stack Developer | Java | Spring Boot | React.js
-
-* GitHub: Add your GitHub profile URL
-* LinkedIn: Add your LinkedIn profile URL
 
 ## 📄 License
 
