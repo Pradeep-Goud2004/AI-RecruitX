@@ -17,12 +17,12 @@ public class CorsConfig {
         CorsConfiguration configuration = new CorsConfiguration();
 
         // Allow local development and deployed frontend
-        configuration.setAllowedOrigins(
-                List.of(
-                        "http://localhost:5173",
-                        "https://ai-recruitx-frontend-production.up.railway.app"
-                )
-        );
+     configuration.setAllowedOrigins(
+        List.of(
+                "http://localhost:5173",
+                "https://airecruitx-frontend-production.up.railway.app"
+        )
+);
 
         // Allow HTTP methods
         configuration.setAllowedMethods(
