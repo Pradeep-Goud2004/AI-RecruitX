@@ -47,28 +47,40 @@ AI RecruitX is a full-stack recruitment platform designed to connect candidates 
 | Vite                        | Frontend development server and build tool |
 | Tailwind CSS                | UI styling                                 |
 
+## 📁 Project Structure
+
+```text
 AI-RecruitX/
-│
 ├── airecruitx-backend/
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/
-│   │   │   │   └── com/airecruitx/airecruitx_backend/
-│   │   │   │       ├── ai/
-│   │   │   │       ├── config/
-│   │   │   │       ├── controller/
-│   │   │   │       ├── dto/
-│   │   │   │       ├── entity/
-│   │   │   │       ├── exception/
-│   │   │   │       ├── repository/
-│   │   │   │       ├── security/
-│   │   │   │       ├── service/
-│   │   │   │       └── AirecruitxBackendApplication.java
-│   │   │   │
+│   │   │   │   └── com/
+│   │   │   │       └── airecruitx/
+│   │   │   │           └── airecruitx_backend/
+│   │   │   │               ├── ai/
+│   │   │   │               │   └── [AI-related classes]
+│   │   │   │               ├── config/
+│   │   │   │               │   └── [Configuration classes]
+│   │   │   │               ├── controller/
+│   │   │   │               │   └── [REST controllers]
+│   │   │   │               ├── dto/
+│   │   │   │               │   └── [Request and response DTOs]
+│   │   │   │               ├── entity/
+│   │   │   │               │   └── [JPA entity classes]
+│   │   │   │               ├── exception/
+│   │   │   │               │   └── [Exception handling classes]
+│   │   │   │               ├── repository/
+│   │   │   │               │   └── [JPA repositories]
+│   │   │   │               ├── security/
+│   │   │   │               │   └── [JWT and security classes]
+│   │   │   │               ├── service/
+│   │   │   │               │   └── [Business logic classes]
+│   │   │   │               └── AirecruitxBackendApplication.java
 │   │   │   └── resources/
 │   │   │       └── application.properties
-│   │   │
 │   │   └── test/
+│   │       └── [Backend test classes]
 │   ├── uploads/
 │   │   └── resumes/
 │   ├── pom.xml
@@ -98,6 +110,7 @@ AI-RecruitX/
 │
 ├── .gitignore
 └── README.md
+```
 ## ⚙️ Getting Started
 
 ### Prerequisites
